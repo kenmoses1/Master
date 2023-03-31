@@ -37,11 +37,11 @@ pipeline {
 
   post {
         always{
-            slackSend( channel: "#gallery", token: "slack_webhook token", color: "good", message: "${custom_msg()}")
+            slackSend( channel: "#moses_ip1", token: "slack_webhook token", color: "good", message: "${custom_msg()}")
         }
 
         failure{
-            slackSend( channel: "#gallery", token: "slack_webhook token", color: "good", message: "${custom_failure_msg()}")
+            slackSend( channel: "#moses_ip1", token: "slack_webhook token", color: "good", message: "${custom_failure_msg()}")
         }
 
         unstable {
